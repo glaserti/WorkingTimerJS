@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset = "utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <title>Tomato Timer</title>
+
+  <style>
+  html { font-family: 'Muli', sans-serif; }
+  body {
+    background-image: url("media/photo-1415226581130-91cb7f52f078.jpg");
+    background-color: #856545;
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+  h1 {  font-weight: 1600;
+        font-size: 200%;
+        background-color: #CCCCCC;
+        opacity: 0.7;
+        padding-top: 25px;
+        padding-right: 50px;
+        padding-bottom: 25px;
+        padding-left: 50px;
+    }
+  h2 { font-font-weight: 800;
+       font-size: 150%;}
+  p { font-weight: 200;
+    font-size: 150%; }
+  #info { position: absolute;
+          top: 30%;
+          right: 10px;
+
+          opacity: 0.7;
+          width: 420px;}
+  #instruction
+    { padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: #CCCCCC;
+    }
+  #text {text-align: justify;}
+  #controls
+    { padding-left: 60px;
+      padding-top: 30px;
+      height: 50px;
+      background-color: #856545;
+    }
+  #clock { font-weight: 400;
+           font-size: 200%;
+           text-align: center;
+           top: 8%;
+           opacity: 0.4;
+         }
+  #restart {
+    text-align: center;
+    opacity: 0.4;
+  }
+  </style>
+
+  <script src='pomotimer.js'></script>
+</head>
+<body>
+  <h1>Working Timer</h1>
+  <div id='info'>
+    <div id='instruction'>
+      <h2>Start the timer!</h2>
+      <p id="text">Each time segment is 25 minutes. After 25 minutes, take a 5 minute break!</p>
+    </div>
+    <div id="controls">
+      <button id="startTimer">Start Work</button>
+      <button id="pauseTimer">Take a break</button>
+    </div>
+  </div>
+  <p id="clock"></p>
+  <p id="restart"></p>
+
+  </body>
+</html>
