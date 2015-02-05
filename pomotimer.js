@@ -50,7 +50,7 @@ function pauseTimer() {
   };
   timer = true;
   concentrate();
-  document.body.style.backgroundImage = "url('media/qkWQIqfGTgibEwt76i6w_photo.jpg')";
+  document.body.style.backgroundImage = "url('Media/qkWQIqfGTgibEwt76i6w_photo.jpg')";
   document.body.style.backgroundColor = "#000000";
   //var clockdisplay = document.getElementById('clock');
   clock.setAttribute("style", "color: white");
@@ -66,7 +66,7 @@ function pomoTimer() {
   };
   timer = true;
   concentrate();
-  document.body.style.backgroundImage = "url('media/D9xlw7UxTBqQw5sLf8cJ_reef insp-72.jpg')";
+  document.body.style.backgroundImage = "url('Media/D9xlw7UxTBqQw5sLf8cJ_reef insp-72.jpg')";
   document.body.style.backgroundColor = "#6B6B6B";
   displaytime = pomotime;
   clock.innerHTML=displaytime + " min.";
