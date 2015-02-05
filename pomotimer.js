@@ -20,6 +20,9 @@ function reduce() {
   if(displaytime == 0) {
     clearInterval(t);
     timer = false;
+    var sound = document.getElementById('sound');
+    sound.volume = 0.3;
+    sound.play();
     restart.innerHTML ="< Press any key to return to the start screen >";
     addEventListener("keydown", function() {
                                               window.location.reload();
@@ -67,7 +70,7 @@ function pomoTimer() {
   timer = true;
   concentrate();
   document.body.style.backgroundImage = "url('Media/D9xlw7UxTBqQw5sLf8cJ_reef insp-72.jpg')";
-  document.body.style.backgroundColor = "#6B6B6B";
+  document.body.style.backgroundColor = "#2E2E2E";
   displaytime = pomotime;
   clock.innerHTML=displaytime + " min.";
   counter();
