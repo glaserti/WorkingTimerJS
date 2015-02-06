@@ -29,15 +29,15 @@ function reduce() {
     restart.innerHTML ="< Press any key to return to the start screen >";
     //reload a fresh starting page
     addEventListener("keydown", function() { window.location.reload(); });
-    addEventListener("click", function() { window.location.reload(); });
+    addEventListener("touchstart", function() { window.location.reload(); });
   };
 };
 
-function restarts() {
+/*function restarts() {
   if (onkeydown == true) {
   window.location.reload();
 }
-};
+};*/
 
 function counter() {
   t = setInterval(reduce,60000);  // 60,000 millisecs == 1 minute
