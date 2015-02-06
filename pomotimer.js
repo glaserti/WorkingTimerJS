@@ -2,6 +2,8 @@ var displaytime;
 var pausetime = 5;
 var pomotime = 25;
 var timer = false;
+var title = document.getElementsByTagName("title");
+
 
 window.onload = init;
 function init() {
@@ -9,14 +11,15 @@ function init() {
   var startbutton = document.getElementById("startTimer");
   var pausebutton = document.getElementById("pauseTimer");
   var restart = document.getElementById("restart");
-  //clock.innerHTML=displaytime + " min.";
   startbutton.onclick = pomoTimer;
   pausebutton.onclick = pauseTimer;
 };
 
 function reduce() {
   displaytime-= 1;
-  clock.innerHTML=displaytime + " min.";
+  var timestring = displaytime + " min.";
+  title[0].innerHTML="Working Timer " + timestring;
+  clock.innerHTML= timestring;
   if(displaytime == 0) {
     clearInterval(t);
     timer = false;
@@ -24,9 +27,9 @@ function reduce() {
     sound.volume = 0.3;
     sound.play();
     restart.innerHTML ="< Press any key to return to the start screen >";
-    addEventListener("keydown", function() {
-                                              window.location.reload();
-                                            }); //reloads a fresh starting page
+    //reload a fresh starting page
+    addEventListener("keydown", function() { window.location.reload(); });
+    addEventListener("click", function() { window.location.reload(); });
   };
 };
 
@@ -55,7 +58,6 @@ function pauseTimer() {
   concentrate();
   document.body.style.backgroundImage = "url('Media/qkWQIqfGTgibEwt76i6w_photo.jpg')";
   document.body.style.backgroundColor = "#000000";
-  //var clockdisplay = document.getElementById('clock');
   clock.setAttribute("style", "color: white");
   restart.setAttribute("style", "color: white");
   displaytime = pausetime;
