@@ -40,7 +40,7 @@ function restarts() {
 };
 
 function counter() {
-  t = setInterval(reduce,1000);  // 60,000 millisecs == 1 minute
+  t = setInterval(reduce,60000);  // 60,000 millisecs == 1 minute
 };
 
 function concentrate() {
