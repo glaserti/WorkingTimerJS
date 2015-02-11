@@ -8,17 +8,18 @@ var title = document.getElementsByTagName("title");
 window.onload = init;
 function init() {
   var clock = document.getElementById("clock");
-  var startbutton = document.getElementById("startTimer");
-  var pausebutton = document.getElementById("pauseTimer");
+  var startbutton = document.getElementById("workbutton");
+  var pausebutton = document.getElementById("pausebutton");
   var restart = document.getElementById("restart");
   startbutton.onclick = pomoTimer;
   pausebutton.onclick = pauseTimer;
 };
 
+
 function reduce() {
   displaytime-= 1;
   var timestring = displaytime + " min.";
-  title[0].innerHTML="Working Timer " + timestring;
+  title[0].innerHTML= timestring + " Working Timer";
   clock.innerHTML= timestring;
   if(displaytime == 0) {
     clearInterval(t);
@@ -29,16 +30,19 @@ function reduce() {
     restart.innerHTML ="< Press any key to return to the start screen >";
     //reload a fresh starting page
     addEventListener("keydown", function() { window.location.reload(); });
-    addEventListener("click", function() { window.location.reload(); });
+    addEventListener("touchstart", function() { window.location.reload(); });
   };
 };
 
-function restarts() {
+<<<<<<< HEAD
+=======
+/*function restarts() {
   if (onkeydown == true) {
   window.location.reload();
 }
-};
+};*/
 
+>>>>>>> FETCH_HEAD
 function counter() {
   t = setInterval(reduce,60000);  // 60,000 millisecs == 1 minute
 };
@@ -48,7 +52,13 @@ function concentrate() {
   header[0].setAttribute("style", "visibility: hidden");
   var info = document.getElementById('info');
   info.setAttribute("style", "visibility: hidden");
-}
+  // hit esc-key to return to start screen
+  addEventListener("keydown", function() {
+    if(event.keyCode == 27) {
+    window.location.reload(); }
+  });
+  addEventListener("touchstart", function() { window.location.reload(); });
+};
 
 function pauseTimer() {
   if(timer == true) {

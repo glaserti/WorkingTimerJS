@@ -37,9 +37,8 @@
                  background-color: #CCCCCC;
                }
   #text {text-align: justify;}
-  #controls { padding-left: 60px;
-              padding-top: 30px;
-              height: 50px;
+  #controls { padding-top: 10px;
+              height: 80px;
               background-color: #856545;
             }
   #clock { font-weight: 400;
@@ -50,6 +49,9 @@
   #restart { text-align: center;
              opacity: 0.4;
            }
+  #workbutton { position: relative; left: 60px; cursor:pointer;}
+  #pausebutton { position: absolute; left: 180px; cursor:pointer;}
+  #infobutton { position: absolute; right: 60px; bottom: 10px;}
   </style>
   <script src='pomotimer.js'></script>
 </head>
@@ -61,8 +63,9 @@
       <p id="text">Each time segment is 25 minutes. After 25 minutes, take a 5 minute break!</p>
     </div>
     <div id="controls">
-      <button id="startTimer">Start Work</button>
-      <button id="pauseTimer">Take a break</button>
+      <img id='workbutton' src="Media/workbutton.png" alt='Work button'></img>
+      <img id='pausebutton' src="Media/pausebutton.png" alt='Pause button'></img>
+      <a href='pomoinfo.html'><img id='infobutton' src="Media/infobutton.png" alt='Info button'></img></a>
     </div>
   </div>
   <p id="clock"></p>
