@@ -34,15 +34,7 @@ function reduce() {
   };
 };
 
-<<<<<<< HEAD
-=======
-/*function restarts() {
-  if (onkeydown == true) {
-  window.location.reload();
-}
-};*/
 
->>>>>>> FETCH_HEAD
 function counter() {
   t = setInterval(reduce,60000);  // 60,000 millisecs == 1 minute
 };
