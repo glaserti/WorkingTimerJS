@@ -1,4 +1,4 @@
 # WorkingTimerJS
 A working timer based on the pomodoro technique in JavaScript
 
-See wiki for potential to-dos & bugs
+See _Wiki_ for potential to-dos & _Issues_ for bugs
