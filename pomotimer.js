@@ -1,3 +1,4 @@
+
 var displaytime;
 var pausetime = 5;
 var pomotime = 25;
@@ -11,6 +12,7 @@ function init() {
   var startbutton = document.getElementById("workbutton");
   var pausebutton = document.getElementById("pausebutton");
   var restart = document.getElementById("restart");
+  var ticking = document.getElementById('ticking');
   startbutton.onclick = pomoTimer;
   pausebutton.onclick = pauseTimer;
 };
@@ -27,6 +29,7 @@ function reduce() {
     var sound = document.getElementById('sound');
     sound.volume = 0.3;
     sound.play();
+    ticking.pause();
     restart.innerHTML ="< Press any key to return to the start screen >";
     //reload a fresh starting page
     addEventListener("keydown", function() { window.location.reload(); });
@@ -78,4 +81,26 @@ function pomoTimer() {
   displaytime = pomotime;
   clock.innerHTML=displaytime + " min.";
   counter();
+  ticker();
+};
+
+function ticker() {
+  tickerControls();
+  ticking.volume = 0.005;
+  ticking.loop=true;
+  ticking.preload="auto";
+  ticking.play();
+};
+
+function tickerControls() {
+  //mute: m = 109, M = 77
+  addEventListener("keydown", function() {
+    if(event.keyCode == 109 || event.keyCode == 77) {
+    ticking.pause(); }
+  });
+  //ticking: t = 116, T = 84
+  addEventListener("keydown", function() {
+    if(event.keyCode == 116 || event.keyCode == 84) {
+      ticking.play(); }
+  });
 }
